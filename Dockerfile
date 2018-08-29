@@ -1,2 +1,2 @@
 FROM maxulysse/snpeffgrch37:latest
-RUN apt-get update && apt-get install python
+RUN apt-get update && apt-get install -y python
