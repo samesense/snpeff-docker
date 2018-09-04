@@ -24,7 +24,8 @@ RUN /bin/bash -c "source /opt/conda/bin/activate base"
 RUN /opt/conda/bin/conda install -c bioconda -c conda-forge snakemake
 
 RUN export conda=/opt/conda/bin/conda
+RUN echo "alias snpEff=/opt/snpEff/scripts/snpEff" >> ~/.bashrc
 RUN alias snpEff=/opt/snpEff/scripts/snpEff
 
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
+#ENTRYPOINT [ "/usr/bin/tini", "--" ]
+#CMD [ "/bin/bash" ]
