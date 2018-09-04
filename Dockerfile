@@ -23,5 +23,7 @@ RUN chmod +x /usr/bin/tini
 RUN /bin/bash -c "source /opt/conda/bin/activate base"
 RUN /opt/conda/bin/conda install -c bioconda -c conda-forge snakemake
 
+EXPORT conda=/opt/conda/bin/conda
+
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
