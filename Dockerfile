@@ -27,6 +27,7 @@ RUN export conda=/opt/conda/bin/conda
 RUN echo "alias snpEff=/opt/snpEff/scripts/snpEff" >> ~/.bashrc
 RUN alias snpEff=/opt/snpEff/scripts/snpEff
 ENV snpEff=/opt/snpEff/scripts/snpEff
+RUN export snpEff=/opt/snpEff/scripts/snpEff
 
 #ENTRYPOINT [ "/usr/bin/tini", "--" ]
 #CMD [ "/bin/bash" ]
