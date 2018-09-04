@@ -20,7 +20,7 @@ ENV TINI_VERSION v0.16.1
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini
 
-RUN /opt/conda/bin/conda activate base
+RUN source /opt/conda/bin/activate base
 RUN /opt/conda/bin/conda install -c bioconda -c conda-forge snakemake
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
