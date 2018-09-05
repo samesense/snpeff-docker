@@ -28,6 +28,7 @@ RUN echo "alias snpEff=/opt/snpEff/scripts/snpEff" >> ~/.bashrc
 RUN alias snpEff=/opt/snpEff/scripts/snpEff
 ENV snpEff=/opt/snpEff/scripts/snpEff
 RUN export snpEff=/opt/snpEff/scripts/snpEff
+ENV PATH /opt/snpEff/scripts/:$PATH
 
 #ENTRYPOINT [ "/usr/bin/tini", "--" ]
 #CMD [ "/bin/bash" ]
