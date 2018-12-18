@@ -25,3 +25,4 @@ RUN /opt/conda/bin/conda install -c bioconda -c conda-forge snakemake
 
 ENV snpEff /opt/snpEff/scripts/snpEff
 ENV PATH /opt/snpEff/scripts/:$PATH
+ENV conda /opt/conda/bin/conda
